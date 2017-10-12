@@ -45,7 +45,7 @@ public class Size {
 		// there are only 17 men ever larger than 2.50m, the equivalent of 100", so
 		// three digits always mean metric system
 
-		long head = NumberUtils.integer(input);
+		long head = NumberUtils.integer(input.replaceAll("[,\\.]", ""));
 		if (head >= MINIMAL_SIZE) {
 			// centimeters
 			size.centimeters = humanSize(head);

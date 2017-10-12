@@ -41,14 +41,14 @@ public class ConsoleApplication {
 
 			if (weight > MAXIMAL_WEIGHT) {
 				System.err.println(String.format(
-						"I am afraid that is more than we can currently support. You need to weight less than %d kg.",
+						"I am afraid that is more than we can currently support. You need to weigh less than %d kg.",
 						MAXIMAL_WEIGHT));
 				continue;
 			}
 
 			if (weight < MINIMUML_WEIGHT) {
 				System.err.println(String.format(
-						"I am afraid that is lower than we can currently support. You need to weight more than %d kg.",
+						"I am afraid that is lower than we can currently support. You need to weigh more than %d kg.",
 						MINIMUML_WEIGHT));
 				continue;
 			}
