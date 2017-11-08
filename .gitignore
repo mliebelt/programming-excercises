@@ -1,14 +1,10 @@
-# Compiled class file
+#################
+## Build
+#################
+
+target/
+build/
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 *.jar
@@ -18,5 +14,54 @@
 *.tar.gz
 *.rar
 
+#################
+## Logs
+#################
+
+# Log file
+*.log
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#################
+## Eclipse
+#################
+
+.classpath
+.project
+.externalToolBuilders/
+.loadpath
+.metadata
+.settings/
+.recommenders/
+bin/
+tmp/
+*.launch
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+#################
+## IntelliJ
+#################
+
+*.iml
+
+#############
+## OS crap
+#############
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
