@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.model.data;
+package com.goeckeler.excercises.festival.tabular.sheet;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class TabularSheet implements Iterable<TabularRow> {
-   private List<TabularRow> rows = new ArrayList<>(1031);
+public class Table implements Iterable<Row> {
+   private List<Row> rows = new ArrayList<>(1031);
 
-   public void addRow(final TabularRow row) {
+   public void addRow(final Row row) {
        rows.add(row);
    }
 
@@ -19,7 +19,7 @@ public class TabularSheet implements Iterable<TabularRow> {
     }
 
     @Override
-    public Iterator<TabularRow> iterator() {
+    public Iterator<Row> iterator() {
         return rows.listIterator();
     }
 }
