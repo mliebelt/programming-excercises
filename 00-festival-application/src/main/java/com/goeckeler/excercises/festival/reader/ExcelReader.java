@@ -1,30 +1,41 @@
 package com.goeckeler.excercises.festival.reader;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.*;
 
 public class ExcelReader {
-    public void read(final String excelFile, final String sheetName) throws FileNotFoundException {
-        final DataFormatter cellFormat = new DataFormatter();
+    final private String excelFile;
+    final DataFormatter cellFormat = new DataFormatter();
+
+    public ExcelReader(final String excelFile) {
+        assert StringUtils.isNotBlank(excelFile);
+        this.excelFile = excelFile;
+    }
+
+    public TabularSheet read(final String sheetName) throws FileNotFoundException {
+        TabularSheet data = new TabularSheet();
+
         try (InputStream excel = ClassLoader.getSystemResourceAsStream(excelFile)) {
             Workbook workbook = WorkbookFactory.create(excel);
             Sheet sheet = workbook.getSheet(sheetName);
 
-            if (sheet == null) return;
+            if (sheet == null) return null;
 
             for (Row row : sheet) {
-                System.out.println();
+                TabularRow tabularRow = new TabularRow();
                 for (Cell cell : row) {
                     String text = cellFormat.formatCellValue(cell);
-                    System.out.print("[" + text + "]");
+                    tabularRow.addCell(text);
                 }
+                data.addRow(tabularRow);
             }
-            System.out.println();
-            System.out.println();
         } catch (IOException | InvalidFormatException ex) {
             System.err.println(String.format("Cannot read from file '%s'.", excelFile));
         }
+
+        return data;
     }
 }
