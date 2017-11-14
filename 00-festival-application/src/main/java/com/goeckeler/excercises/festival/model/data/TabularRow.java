@@ -12,6 +12,11 @@ public class TabularRow {
         cells.add(text);
     }
 
+    public String getCell(int index) {
+        if (index < 0 || index >= cells.size()) return null;
+        return cells.get(index);
+    }
+
     @Override
     public String toString() {
         return "(" + StringUtils.join(cells, ", ") + ")";

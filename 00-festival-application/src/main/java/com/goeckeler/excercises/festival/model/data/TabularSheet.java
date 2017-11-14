@@ -3,9 +3,10 @@ package com.goeckeler.excercises.festival.model.data;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class TabularSheet {
+public class TabularSheet implements Iterable<TabularRow> {
    private List<TabularRow> rows = new ArrayList<>(1031);
 
    public void addRow(final TabularRow row) {
@@ -15,5 +16,10 @@ public class TabularSheet {
     @Override
     public String toString() {
        return "[" + StringUtils.join(rows, ", ") + "]";
+    }
+
+    @Override
+    public Iterator<TabularRow> iterator() {
+        return rows.listIterator();
     }
 }

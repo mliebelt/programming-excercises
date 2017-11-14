@@ -1,6 +1,7 @@
 package com.goeckeler.excercises.festival.model.technical;
 
 import com.goeckeler.excercises.festival.model.domain.Named;
+import org.apache.commons.lang3.StringUtils;
 
 public class BandData implements Named {
     private String name;
@@ -16,10 +17,15 @@ public class BandData implements Named {
 
     @Override
     public String getName() {
-        return name;
+        return StringUtils.defaultString(name, "Unknown");
     }
 
     public String getArtists() {
         return artists;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " (" + getArtists() + ")";
     }
 }
