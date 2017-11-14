@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.domain;
+package com.goeckeler.excercises.festival.model.domain;
 
 import org.apache.commons.lang3.StringUtils;
 

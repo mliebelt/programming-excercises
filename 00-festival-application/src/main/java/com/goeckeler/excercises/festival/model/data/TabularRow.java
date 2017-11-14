@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.reader;
+package com.goeckeler.excercises.festival.model.data;
 
 import org.apache.commons.lang3.StringUtils;
 

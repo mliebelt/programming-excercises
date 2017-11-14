@@ -1,7 +1,7 @@
 package com.goeckeler.excercises.festival;
 
 import com.goeckeler.excercises.festival.reader.ExcelReader;
-import com.goeckeler.excercises.festival.reader.TabularSheet;
+import com.goeckeler.excercises.festival.model.data.TabularSheet;
 
 import java.io.FileNotFoundException;
 
