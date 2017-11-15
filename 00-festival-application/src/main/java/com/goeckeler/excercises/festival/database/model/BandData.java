@@ -1,6 +1,6 @@
 package com.goeckeler.excercises.festival.database.model;
 
-import com.goeckeler.excercises.festival.model.domain.Named;
+import com.goeckeler.excercises.festival.domain.Named;
 import org.apache.commons.lang3.StringUtils;
 
 public class BandData implements Named {

@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.model.domain;
+package com.goeckeler.excercises.festival.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
