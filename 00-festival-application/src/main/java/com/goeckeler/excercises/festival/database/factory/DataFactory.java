@@ -1,5 +1,6 @@
-package com.goeckeler.excercises.festival.model.technical;
+package com.goeckeler.excercises.festival.database.factory;
 
+import com.goeckeler.excercises.festival.database.model.BandData;
 import com.goeckeler.excercises.festival.tabular.sheet.Table;
 import com.goeckeler.excercises.festival.tabular.sheet.Row;
 

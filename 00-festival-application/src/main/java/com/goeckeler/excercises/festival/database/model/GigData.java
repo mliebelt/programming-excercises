@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.model.technical;
+package com.goeckeler.excercises.festival.database.model;
 
 public class GigData {
     private String order;

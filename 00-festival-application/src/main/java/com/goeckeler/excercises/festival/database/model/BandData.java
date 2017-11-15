@@ -1,4 +1,4 @@
-package com.goeckeler.excercises.festival.model.technical;
+package com.goeckeler.excercises.festival.database.model;
 
 import com.goeckeler.excercises.festival.model.domain.Named;
 import org.apache.commons.lang3.StringUtils;

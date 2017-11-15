@@ -1,7 +1,7 @@
 package com.goeckeler.excercises.festival;
 
-import com.goeckeler.excercises.festival.model.technical.BandData;
-import com.goeckeler.excercises.festival.model.technical.DataFactory;
+import com.goeckeler.excercises.festival.database.model.BandData;
+import com.goeckeler.excercises.festival.database.factory.DataFactory;
 import com.goeckeler.excercises.festival.tabular.reader.excel.ExcelReader;
 import com.goeckeler.excercises.festival.tabular.sheet.Table;
 import org.apache.commons.lang3.StringUtils;
