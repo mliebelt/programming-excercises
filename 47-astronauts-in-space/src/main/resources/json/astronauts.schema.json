@@ -1,0 +1,54 @@
+{
+  "$id": "http://api.open-notify.org/astros.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "properties": {
+    "people": {
+      "$id": "/properties/people",
+      "type": "array",
+      "items": {
+        "$id": "/properties/people/items",
+        "type": "object",
+        "properties": {
+          "name": {
+            "$id": "/properties/people/items/properties/name",
+            "type": "string",
+            "title": "Name of the astronaut",
+            "default": "",
+            "examples": [
+              "Juri Gagarin"
+            ]
+          },
+          "craft": {
+            "$id": "/properties/people/items/properties/craft",
+            "type": "string",
+            "title": "Name of the spacecraft",
+            "default": "",
+            "examples": [
+              "ISS"
+            ]
+          }
+        }
+      }
+    },
+    "number": {
+      "$id": "/properties/number",
+      "type": "integer",
+      "title": "Count of astronauts in space",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "message": {
+      "$id": "/properties/message",
+      "type": "string",
+      "title": "Status message",
+      "default": "",
+      "examples": [
+        "success"
+      ]
+    }
+  }
+}
